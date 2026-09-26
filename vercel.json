@@ -1,0 +1,17 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "buildCommand": "cd frontend && npm run build",
+  "installCommand": "uv pip install --python .vercel/python/.venv -r requirements.txt && npm --prefix frontend ci",
+  "outputDirectory": "public",
+  "regions": ["hnd1"],
+  "rewrites": [
+    { "source": "/health", "destination": "/api/health" }
+  ],
+  "functions": {
+    "api/index.py": {
+      "maxDuration": 60,
+      "includeFiles": "{config/**,frontend/public/boundaries/**}",
+      "excludeFiles": "{.env*,.secrets/**,.vercel/**,backend/tests/**,tests/**,scripts/**,reports/**,frontend/node_modules/**,frontend/src/**,frontend/*.{html,json,ts},public/**,*.md,requirements-dev.txt,pytest.ini,SOURCE_BASELINE.sha256,**/__pycache__/**,**/*.py[cod]}"
+    }
+  }
+}

@@ -1,0 +1,66 @@
+project:
+  name: gyeonggi-industry-dashboard
+  version: 0.1.0
+  analysis_years: [2019, 2020, 2021, 2022, 2023, 2024]
+  excluded_years: []
+
+motherduck:
+  database_env: MOTHERDUCK_DATABASE
+  readonly_token_env: MOTHERDUCK_READONLY_TOKEN
+  fact_table: fact_industry_location
+  readonly: true
+
+classification:
+  year_revision:
+    2019: 10
+    2020: 10
+    2021: 10
+    2022: 10
+    2023: 10
+    2024: 11
+  growth_break_years: [2024]
+  linkage_table_used: false
+
+boundaries:
+  provider: admdongkor
+  version: "20251231"
+  province_name: 경기도
+  analysis_crs: EPSG:5179
+  web_crs: EPSG:4326
+  source_levels: [sgg, emd]
+  levels: [sigun, sgg, emd]
+
+quality:
+  recommended_tiers:
+    - strict_exact
+    - space_subno_exact
+    - cluster_resolved_30m
+    - cluster_resolved_60m
+  review_tiers:
+    - review_needed
+  excluded_tiers:
+    - unmatched
+    - not_normalized
+
+map:
+  h3_resolution:
+    province: 7
+    sigungu: 8
+    admin_dong: 9
+  max_cells_per_request: 5000
+  max_points_per_request: 15000
+
+heatmap:
+  density_transform: log1p
+  density_clip_percentile: 95
+  scale_percentiles: [50, 75, 90, 95, 99]
+  lq_reference_region: gyeonggi
+  lq_breaks: [0.5, 1.0, 2.0, 4.0]
+  minimum_total_count: 20
+  minimum_selected_count: 5
+  minimum_growth_base_count: 5
+  adaptive_single_year_scale: true
+  fixed_comparison_scale: true
+
+storage:
+  boundary_path: frontend/public/boundaries

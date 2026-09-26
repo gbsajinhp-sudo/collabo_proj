@@ -1,0 +1,12 @@
+# GitHub 사용자명을 확정한 후 CODEOWNERS로 이름을 바꾼다.
+# 아래 @human1, @human2, @human3은 역할 표기이며 실제 GitHub 계정으로 교체해야 한다.
+
+/pipeline/data_in/ @human1
+/pipeline/engine/ @human2
+/pipeline/data_out/ @human2
+/backend/ @human3
+/frontend/ @human3
+/infra/vercel/ @human3 @human1
+/contracts/ @human1 @human2 @human3
+/docs/ @human1
+/vercel.json @human1 @human3
