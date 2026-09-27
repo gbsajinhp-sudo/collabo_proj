@@ -2,7 +2,7 @@
 
 ## MotherDuck
 
-- Database: `gyeonggi_industry_dashboard_v20260915`
+- Database: `gyeonggi_industryDB`
 - Physical schema: existing `main`
 - Application access: read-only
 - Runtime variable: `MOTHERDUCK_READONLY_TOKEN`

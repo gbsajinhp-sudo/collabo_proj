@@ -1,6 +1,6 @@
 # Current MotherDuck Baseline
 
-Database: `gyeonggi_industry_dashboard_v20260915`
+Database: `gyeonggi_industryDB`
 
 | Object | Rows |
 |---|---:|

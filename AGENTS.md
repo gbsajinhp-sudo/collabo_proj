@@ -17,7 +17,7 @@
 - 전체 데이터 대신 `samples/`의 비식별 소량 데이터를 사용한다.
 - `.env`, 토큰, 개인 경로, DB 파일을 코드나 문서에 기록하지 않는다.
 - 분석 API에서 지표를 즉석 계산하지 않고 검증된 DATA_out을 조회한다.
-- 공유 MotherDuck DB `gyeonggi_industry_dashboard_v20260915`에 DDL이나 DML을 실행하지 않는다.
+- 공유 MotherDuck DB `gyeonggi_industryDB`에 DDL이나 DML을 실행하지 않는다.
 - 데이터 변경 실험은 소량 샘플이나 별도 버전 DB에서만 수행한다.
 - Production 배포는 human1의 최종 확인 후 human1이 수행한다.
 

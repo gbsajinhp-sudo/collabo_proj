@@ -16,7 +16,7 @@ MotherDuck의 815만 건 상세 데이터와 집계 데이터는 원격 DB에 �
 
 ## 현재 단계
 
-검증된 Vercel 배포본의 FastAPI, 프론트엔드, 경계 파일과 조회 검증 도구를 이관했다. 운영 데이터는 파일로 복사하지 않고 기존 MotherDuck DB `gyeonggi_industry_dashboard_v20260915`를 읽기 전용으로 공유한다.
+검증된 Vercel 배포본의 FastAPI, 프론트엔드, 경계 파일과 조회 검증 도구를 이관했다. 운영 데이터는 파일로 복사하지 않고 기존 MotherDuck DB `gyeonggi_industryDB`를 읽기 전용으로 공유한다.
 
 | 기존 위치 | 이관 대상 |
 |---|---|

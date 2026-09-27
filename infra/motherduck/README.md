@@ -2,7 +2,7 @@
 
 MotherDuck 원격 DB의 논리 구성, 적재 순서, 권한과 검증 명령을 문서화한다.
 
-운영 연결 대상은 기존 `gyeonggi_industry_dashboard_v20260915`이며 현재 물리 스키마와 테이블명을 그대로 유지한다.
+운영 연결 대상은 기존 `gyeonggi_industryDB`이며 현재 물리 스키마와 테이블명을 그대로 유지한다.
 
 ```text
 기존 MotherDuck DB main 스키마
